@@ -18,7 +18,6 @@ print(shuffle_list(list_))
 
 
 
-
 #2-вариант
 lst = [random.randint(0, 50) for i in range(random.randint(5, 10))]
 print(f"исходный список:\n {lst}")
