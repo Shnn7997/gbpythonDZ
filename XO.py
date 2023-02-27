@@ -1,9 +1,11 @@
+# Крестики-Нолики
+
 import random
 
-# Инициализация игрового поля
+
 board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-# Отрисовка игрового поля
+
 def draw_board():
     print(board[0], "|", board[1], "|", board[2])
     print("----------")
@@ -11,7 +13,7 @@ def draw_board():
     print("----------")
     print(board[6], "|", board[7], "|", board[8])
 
-# Выбор игрока
+
 def player_choice():
     choice = int(input("Введите цифру от 1 до 9: "))
     if board[choice - 1] != "X" and board[choice - 1] != "O":
@@ -20,7 +22,7 @@ def player_choice():
         print("Неверный ввод. Попробуйте еще раз")
         player_choice()
 
-# Выбор бота
+
 def bot_choice():
     choice = random.randint(0, 8)
     if board[choice] != "X" and board[choice] != "O":
@@ -28,7 +30,7 @@ def bot_choice():
     else:
         bot_choice()
 
-# Проверка на победителя
+
 def check_win():
     if board[0] == board[1] == board[2] == "X" or \
             board[3] == board[4] == board[5] == "X" or \
@@ -53,7 +55,7 @@ def check_win():
     else:
         return False
 
-# Основная программа
+
 def main():
     print("Добро пожаловать в игру Крестики-Нолики")
     print("Выберите режим игры")
